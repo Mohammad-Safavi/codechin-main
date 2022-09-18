@@ -1,0 +1,14 @@
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'codechin_main',
+        'USER': 'azeto_user',
+        'PASSWORD': '1234',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    },
+}
