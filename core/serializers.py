@@ -6,7 +6,7 @@ class UserSerializer(serializers.ModelSerializer):
 	
 	class Meta :
 		model = User
-		fields = '__all__'
+		fields = ('id', 'first_name', 'last_name')
 
 class RegisterCodeSerializer(serializers.Serializer):
 	phone = serializers.CharField(max_length=100)

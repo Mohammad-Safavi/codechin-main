@@ -7,5 +7,5 @@ from app.helper.pagination import StandardResultsSetPagination
 class ArticleViewSet(generics.ListAPIView, generics.RetrieveAPIView,
 	viewsets.GenericViewSet):
 	pagination_class = StandardResultsSetPagination
-	queryset = Article.objects.all()
+	queryset = Article.objects.filter(status=True).all()
 	serializer_class = ArticleSerializer
