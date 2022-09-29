@@ -8,6 +8,10 @@ class UserSerializer(serializers.ModelSerializer):
 		model = User
 		fields = '__all__'
 
+class RegisterCodeSerializer(serializers.Serializer):
+	phone = serializers.CharField(max_length=100)
+
+
 class PictureSerializer(serializers.ModelSerializer):
 	
 	class Meta :

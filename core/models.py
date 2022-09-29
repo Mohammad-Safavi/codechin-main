@@ -2,6 +2,15 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
+
+class RegisterCode(models.Model) : 
+	
+	code = models.CharField(max_length=100)
+	created_at = models.DateTimeField(auto_now_add=True)
+
+	def __str__(self) :
+		return self.code
+
 class Picture(models.Model):
 
 	title = models.CharField(max_length=255)
@@ -22,4 +31,6 @@ class WorkSample(models.Model):
 	created_at = models.DateTimeField(auto_now_add=True)
 	started_at = models.DateTimeField()
 	ended_at = models.DateTimeField()
+
+
 
